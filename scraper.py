@@ -11,14 +11,22 @@ def authorization():
     api = tweepy.API(auth)
     return api
 
+def csv_writer(tweets):
+    with open('tweets.csv', 'a') as doc:
+        writer = csv.writer()
+        writer.writerow((tweets,)):
+
 def get_tweets(query, api)
     public_tweets = api.home_timeline()
     query = 'mr robot'
     for tweet in tweepy.Cursor(api.search,q=query,count=100,result_type="recent",include_entities=True,lang='eng').items():
         print(tweet.text)
+    return tweet
         
 def main():
-    pass
+    api = authtorziation()
+    tweets = get_tweets(api)
+    csv.writer(tweets)
 
 if __name__ == "__main__":
     main()
