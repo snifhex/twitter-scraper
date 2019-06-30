@@ -24,8 +24,8 @@ def savedHtml(html, query):
 
 def getQuery(query):
     url = f'https://twitter.com/search?q={query}'
-    # options = webdriver.ChromeOptions()
-    # options.add_argument('headless')
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
     driver = webdriver.Chrome()
     driver.get(url)
     driver.find_element_by_xpath(
