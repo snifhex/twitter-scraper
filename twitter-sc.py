@@ -12,7 +12,6 @@ driver.get('https://twitter.com/search?q=something&src=typd')
 code = driver.page_source.encode('utf-8')
 
 
-
 def read_html():
     fileName = 'something.html'
     with open(fileName, 'r') as doc:
@@ -42,8 +41,6 @@ def toCsv(tweet):
         tweetWriter.writerow((tweet,))
         print('Wrote a tweet to csv file.')
     
-
-
 
 if __name__ == '__main__':
     main(code)
